@@ -107,20 +107,26 @@ public:
     //Devuelve el valor almacenado en el ultimo nodo de la lista
     Tipo obtenerUltimoValor()
 {
+//Creamos un nodo que empiece en inicio
    Nodo<Tipo>*temp = inicio;
 //Usamos el ciclo para recorrer la lista
     while(temp->sig!=NULL)
     {
         temp= temp->sig;
     }
+//Regresamos el valor que almacenamos en nuestra variable temporal
     return temp->valor;
 
 }
     //Devuelve el valor mayor almacenado en la lista
     Tipo obtenerMayor()
  {
+//Creamos un nodo que empiece en inicio
     Nodo<Tipo>*temp = inicio;
+//Creamos una variable de valor pequeño para evaluarla con la de nuestra lista
     int mayor = -9999;
+//Creamos el ciclo en el cual comparamos si el nuestro valor temporal(de la lista) es mayor al nuestra variable
+//si lo es almacena el valor en la variable mayor y evalua los otros valores temporales y retorna el valor mayor
     while(temp!=NULL)
         {
             if(mayor<temp->valor)
